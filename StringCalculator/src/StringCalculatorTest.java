@@ -62,4 +62,9 @@ public class StringCalculatorTest {
             Assert.assertEquals("Negative not allowed: -5",e.getMessage());
         }
     }
+
+    @Test
+    public void GT1000Ignored() {
+        Assert.assertEquals(111,calc.Add("1000,100,10,1"));
+    }
 }
