@@ -77,4 +77,9 @@ public class StringCalculatorTest {
     public void randomDelimiter() {
         Assert.assertEquals(15,calc.Add("//[xxx]\n1xxx2xxx3xxx4xxx5"));
     }
+
+    @Test
+    public void multipleDelimiters() {
+        Assert.assertEquals(6,calc.Add("//[a][b]\n1c2d3"));
+    }
 }
