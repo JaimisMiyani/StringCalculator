@@ -34,4 +34,9 @@ public class StringCalculatorTest {
     public void sumofMultipleNewline() {
         Assert.assertEquals(21,calc.Add("1,2\n3\n4,5,6"));
     }
+
+    @Test
+    public void onlyNewline() {
+        Assert.assertEquals(0,calc.Add("\n\n\n\n\n\n"));
+    }
 }
