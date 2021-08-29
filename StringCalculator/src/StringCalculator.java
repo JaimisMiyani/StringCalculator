@@ -5,8 +5,14 @@ public class StringCalculator {
         } else if (numbers.length() == 1) {
             return Integer.parseInt(numbers);
         } else {
-            String[] nums = numbers.split(",|\n");
-            return sumNumbers(nums);
+            int temp = 0;
+            if(numbers.matches("//(.)\n(.*)")) {
+                char delimiter = numbers.charAt(2);
+                String newStr = numbers.substring(4);
+                String[] nums = newStr.split(Character.toString(delimiter));
+                temp = sumNumbers(nums);
+            }
+            return temp;
         }
     }
 
