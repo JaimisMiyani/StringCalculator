@@ -44,4 +44,9 @@ public class StringCalculatorTest {
     public void delimiters() {
         Assert.assertEquals(3,calc.Add("//;\n1;2"));
     }
+
+    @Test
+    public void negativeNumberTest() {
+        Assert.assertEquals("Negatives not allowed: [-3, -5]", calc.Add("1,2,-3,4,-5,6") );
+    }
 }
