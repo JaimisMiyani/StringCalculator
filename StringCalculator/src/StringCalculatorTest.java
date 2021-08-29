@@ -46,11 +46,20 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void negativeNumberTest() {
+    public void negativeNumber() {
         try {
             calc.Add("1,2,-3,4,-5,6");
         } catch (IllegalArgumentException e) {
             Assert.assertEquals("Negative not allowed: -3,-5", e.getMessage());
+        }
+    }
+
+    @Test
+    public void negativeNumberSingle() {
+        try {
+            calc.Add("-5");
+        } catch (IllegalArgumentException e) {
+            Assert.assertEquals("Negative not allowed: -5",e.getMessage());
         }
     }
 }
