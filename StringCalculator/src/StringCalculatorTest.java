@@ -80,6 +80,6 @@ public class StringCalculatorTest {
 
     @Test
     public void multipleDelimiters() {
-        Assert.assertEquals(6,calc.Add("//[a][b]\n1c2d3"));
+        Assert.assertEquals(10,calc.Add("//[;][,][;]\n1;2,3;4"));
     }
 }
