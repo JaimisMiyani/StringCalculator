@@ -39,4 +39,9 @@ public class StringCalculatorTest {
     public void onlyNewline() {
         Assert.assertEquals(0,calc.Add("\n\n\n\n\n\n"));
     }
+
+    @Test
+    public void delimiters() {
+        Assert.assertEquals(6,calc.Add("//;\n\n1;2;3"));
+    }
 }
