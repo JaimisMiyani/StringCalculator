@@ -5,13 +5,13 @@ public class StringCalculator {
         } else if (numbers.length() == 1) {
             return Integer.parseInt(numbers);
         } else {
-            String[] nums = numbers.split(",");
+            String[] nums = numbers.split(",|\n");
             return sumNumbers(nums);
         }
     }
 
     public int sumNumbers(String[] nums){
-        int SUM=0;
+        int SUM = 0;
         for(String each : nums){
             SUM += Integer.parseInt(each);
         }
