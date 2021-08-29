@@ -37,6 +37,9 @@ public class StringCalculator {
                     NegativeNumbers.append(","+each.toString());
                 }
             }
+            if(Integer.parseInt(each) > 1000) {
+                continue;
+            }
             SUM += Integer.parseInt(each);
         }
         return SUM;

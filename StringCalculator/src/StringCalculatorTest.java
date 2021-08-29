@@ -65,6 +65,6 @@ public class StringCalculatorTest {
 
     @Test
     public void GT1000Ignored() {
-        Assert.assertEquals(111,calc.Add("1000,100,10,1"));
+        Assert.assertEquals(111,calc.Add("1001,100,10,1"));
     }
 }
