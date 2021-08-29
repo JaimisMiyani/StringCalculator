@@ -47,6 +47,10 @@ public class StringCalculatorTest {
 
     @Test
     public void negativeNumberTest() {
-        Assert.assertEquals("Negatives not allowed: [-3, -5]", calc.Add("1,2,-3,4,-5,6") );
+        try {
+            calc.Add("1,2,-3,4,-5,6");
+        } catch (IllegalArgumentException e) {
+            Assert.assertEquals("Negative not allowed: -3,-5", e.getMessage());
+        }
     }
 }
