@@ -11,6 +11,9 @@ public class StringCalculator {
                 String newStr = numbers.substring(4);
                 String[] nums = newStr.split(Character.toString(delimiter));
                 temp = sumNumbers(nums);
+            } else {
+                String[] nums = numbers.split(",|\n");
+                temp = sumNumbers(nums);
             }
             return temp;
         }
